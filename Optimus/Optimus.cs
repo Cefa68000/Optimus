@@ -19,13 +19,13 @@ namespace Optimus
             Random = random;
         }
 
-        public uint Encode(uint number)
+        public ulong Encode(uint number)
         {
             var encoded = ((number * Prime) & int.MaxValue) ^ Random;
-            return (uint)encoded;
+            return encoded;
         }
 
-        public uint Decode(uint number)
+        public uint Decode(ulong number)
         {
             var decoded = ((number ^ Random) * ModInverse) & int.MaxValue;
             return (uint)decoded;
