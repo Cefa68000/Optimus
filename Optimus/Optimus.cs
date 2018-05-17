@@ -38,6 +38,8 @@ namespace Optimus
             return inverse;
         }
 
+        //Code taken from https://stackoverflow.com/a/21919260 by Samuel Allan
+        //Seems to work fine
         public long GetModInverse(long a, long n)
         {
             long i = n, v = 0, d = 1;
